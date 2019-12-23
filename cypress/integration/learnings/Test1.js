@@ -7,7 +7,6 @@ describe('My First Test Suite', function () {
         cy.get('.products').find('.product').should('have.length', 4)
         cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click()
         cy.get('.products').find('.product').each(($el, index, $list) => {
-
             const productName = $el.find('.product-name').text()
             if (productName.includes('Cashews')) {
                 $el.find('button').click();
