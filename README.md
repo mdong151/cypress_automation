@@ -71,6 +71,7 @@ travel: tagname child_tagname
 16. Add `/// <reference types="cypress" />` to add autocompletion for cy
 
 17. Assertion: https://docs.cypress.io/guides/references/assertions.html#Chai
+
 check size: 
 ```
 cy.get('div.products-wrapper div.product').should(have.length, 4)
@@ -101,7 +102,7 @@ cy.get('.products').find('.product').eq(2)
 22. In Cypress, all the steps return `promise` - a state of a step: resolved, rejection, pending
 method .then() will wait until the `promise` resolved
 
-23. iteration and get the element to click
+23. Iteration and get the element to click
 
 ```
 cy.get('.products').find('.product').each(($el, index, $list) => {
@@ -112,4 +113,24 @@ cy.get('.products').find('.product').each(($el, index, $list) => {
         })
 ```
 
-24. 
+24. Below codes snipset won't work because it is outside of cypress functions, you have to take care of the command order, the `promise` context was not use below
+
+```
+const logo = cy.get('.brand')
+cy.log(logo.text());
+```
+
+Below will not work as well because text() is not cypress command, it is JQuery methods! 
+
+```
+const logo = cy.get('.brand').text();
+        cy.log(logo.text());
+```
+
+Need to fix as. `then` method is to take care of `promise`
+
+```
+cy.get('.brand').then(function(logolement){
+            cy.log(logolement.text())
+        })
+```

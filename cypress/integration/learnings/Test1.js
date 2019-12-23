@@ -12,6 +12,11 @@ describe('My First Test Suite', function () {
                 $el.find('button').click();
             }
         })
+        // const logo = cy.get('.brand').text();
+        // cy.log(logo.text());
+        cy.get('.brand').then(function(logolement){
+            cy.log(logolement.text())
+        })
     })
 })
 
