@@ -35,25 +35,25 @@ node_modules\.bin\cypress open
 
 11. Mocha have 2 methods: 
 
-`describe` - act like test suites\n
-`it` - act like test cases\n
+- `describe` - act like test suites\n
+- `it` - act like test cases\n
 
 12. Run the test via command line: (when run in command line, Cypress always run in headless) 
 
-run all test: `node_modules\.bin\cypress run`
-run 1 spec file: `node_modules\.bin\cypress run --spec "cypress\integration\learnings\Test1.js"`\n
-run with headed mode: `node_modules\.bin\cypress run --headed --spec "cypress\integration\learnings\Test1.js"`\n
-run all test spec under 1 folder: `node_modules\.bin\cypress run --headed --spec "cypress\integration\learnings\*"`\n
-run test with chrome browser: `run --browser chrome`\n
+- run all test: `node_modules\.bin\cypress run`
+- run 1 spec file: `node_modules\.bin\cypress run --spec "cypress\integration\learnings\Test1.js"`
+- run with headed mode: `node_modules\.bin\cypress run --headed --spec "cypress\integration\learnings\Test1.js"`
+- run all test spec under 1 folder: `node_modules\.bin\cypress run --headed --spec "cypress\integration\learnings\*"`
+- run test with chrome browser: `run --browser chrome`\n
 
 13. Folder strucure
 
-`fixture` folder: to store test data, xml, excel ... user command fixture to get this data \n
-`integration` folder: write test here\n
-`plugins` folder: handle Cypress event: listener \n
-`support` folder: write util methods here, \n
-`videos` folder: videos will be stored here \n
-`cypress.json` file: to store configuration for cypress \n
+- `fixture` folder: to store test data, xml, excel ... user command fixture to get this data 
+- `integration` folder: write test here
+- `plugins` folder: handle Cypress event: listener 
+- `support` folder: write util methods here, 
+- `videos` folder: videos will be stored here
+- `cypress.json` file: to store configuration for cypress
 
 14. Cypress only support CSS selector
 
@@ -64,8 +64,9 @@ id: #idname, tagname#idname
 classname: .classname , tagname.classname
 atributes: tagname[attribute='value']
 travel: tagname child_tagname
-in chrome, use $$("") to do CSS select 
 ```
+
+- In chrome, use $$("") to do CSS select 
 
 16. Add `/// <reference types="cypress" />` to add autocompletion for cy
 
@@ -75,7 +76,7 @@ check size:
 cy.get('div.products-wrapper div.product').should(have.length, 4)
 ```
 
-18. find only visible element: 
+18. Get only visible element: 
 
 ```
 cy.get('div.products-wrapper div.product:visible')
