@@ -19,13 +19,15 @@ npm init
 ```
 --> follow instruction, Package.json will be created
 
-8. install cypress using this command: 
+8. Install cypress using this command: 
+
 ```
 npm install cypress --save-dev
 ```
 --> It will install cypress and add dependencies into your `package.json`, next time you just npm install and it will understand
 
 9. Open the test runner by 
+
 ```
 node_modules\.bin\cypress open
 ``` 
