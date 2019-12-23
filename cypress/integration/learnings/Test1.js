@@ -14,9 +14,16 @@ describe('My First Test Suite', function () {
         })
         // const logo = cy.get('.brand').text();
         // cy.log(logo.text());
-        cy.get('.brand').then(function(logolement){
+        cy.get('.brand').then(function (logolement) {
             cy.log(logolement.text())
         })
+        cy.get('.products').as('productsLocator')
+        cy.get('@productsLocator').find('.product').should('have.length', 4)
+        cy.get('@productsLocator').find('.product').should('have.length', 4).then(function(){
+            console.log('ahihi')
+        })
+        //assert if logo text is correctly displayed
+        cy.get('.brand').should('have.text','GREENKART')
     })
 })
 

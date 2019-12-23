@@ -136,3 +136,21 @@ cy.get('.brand').then(function(logolement){
             cy.log(logolement.text())
         })
 ```
+
+25. locator can be reused by using `as()` method
+
+```
+cy.get('.products').as('productsLocator')
+cy.get('@productsLocator').find('.product').should('have.length', 4)
+```
+
+26. `console.log()` print log in browser console
+`cy.log()` print log in cypress runner
+
+27. To make non-cypress commands run with `promise`, need to manually manipulate it
+
+```
+cy.get('@productsLocator').find('.product').should('have.length', 4).then(function(){
+    console.log('ahihi')
+    })
+```
