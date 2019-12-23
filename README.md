@@ -2,11 +2,11 @@
 
 # My personal notes:
 1. Download node.js https://nodejs.org/en/download/
-2. locate node instal file at `C:\Program Files\nodejs`, add the path to your system environment 
+2. Locate node instal file at `C:\Program Files\nodejs`, add the path to your system environment 
 3. Add NODE_HOME (value `C:\Program Files\nodejs`) to your path 
 4. Create a seperated directory to work with Cypress: `C:\Users\Admin\Documents\Projects\CypressAutomation`
 5. Instal visual studio code
-6. generate Package.json and Cypress dependencies, scan Package.json and download nessary dependencies
+6. Generate Package.json and Cypress dependencies, scan Package.json and download nessary dependencies
 
 ```
 npm install
