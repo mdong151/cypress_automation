@@ -164,3 +164,5 @@ cy.get('@productsLocator').find('.product').should('have.length', 4).then(functi
 31. Select all checkboxes: `cy.get("input[type='checkbox']").check()`
 
 32. Select only 2 checkboxes `cy.get("input[type='checkbox']").check(['option2', 'option3'])`
+
+33. Select an option `cy.get("select").select('option2').should('have.value','option2')`
