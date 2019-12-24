@@ -166,3 +166,19 @@ cy.get('@productsLocator').find('.product').should('have.length', 4).then(functi
 32. Select only 2 checkboxes `cy.get("input[type='checkbox']").check(['option2', 'option3'])`
 
 33. Select an option `cy.get("select").select('option2').should('have.value','option2')`
+
+34. Cypress auto accept pop-up / alert
+
+35. Cypress have capability to listen to browser, when Alert opened, browser trigger event: `window:alert`, `window:comfirm`
+
+```
+https://docs.cypress.io/api/events/catalog-of-events.html#App-Events
+```
+
+36. To validate alert message, first you need to trigger that alert, then use like example below to grab the message
+
+```
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal('Hello , share this practice page and share your knowledge')
+        })
+```
