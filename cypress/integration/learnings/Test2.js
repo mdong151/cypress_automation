@@ -14,7 +14,7 @@ describe('Test2 - Checkout suites', function () {
         })
         cy.get('.cart-icon > img').click();
         // cy.get(".cart-preview [type='button']").click()
-        cy.contains('PROCEED TO CHECKOUT').click()
-        cy.wait(2000)
+        // cy.contains('PROCEED TO CHECKOUT').click()
+        // cy.wait(2000)
     })
 })

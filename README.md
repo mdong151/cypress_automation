@@ -154,3 +154,13 @@ cy.get('@productsLocator').find('.product').should('have.length', 4).then(functi
     console.log('ahihi')
     })
 ```
+
+28. Use `check()` method for check boxes
+
+29. Use `should('be.checked')` for check behavior of elements
+
+30. Use `.and()` to do another validation instead of using `.should()` again
+
+31. Select all checkboxes: `cy.get("input[type='checkbox']").check()`
+
+32. Select only 2 checkboxes `cy.get("input[type='checkbox']").check(['option2', 'option3'])`
