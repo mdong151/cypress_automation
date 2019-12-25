@@ -182,3 +182,9 @@ https://docs.cypress.io/api/events/catalog-of-events.html#App-Events
             expect(str).to.equal('Hello , share this practice page and share your knowledge')
         })
 ```
+
+37. To edit DOM document, use `invoke()` method to run JQuery commands `removeAttr`
+
+```
+cy.get('#opentab').invoke('removeAttr', 'target').click()
+```
