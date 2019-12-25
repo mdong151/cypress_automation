@@ -2,7 +2,7 @@
 
 describe('Test suite No. 4', function () {
     it('Test case No.1', function () {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
+        cy.visit('http://www.qaclickacademy.com/practice.php')
         cy.get('#alertbtn').click()
         cy.get('#confirmbtn').click();
 
