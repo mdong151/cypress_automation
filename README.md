@@ -202,3 +202,14 @@ cy.get("#product tr td:nth-child(2)").each(($el, index, $list) => {
     }
 })
 ```
+
+39. Access to fixture/example.json
+
+```
+before(function () {
+        //run once before all tests in the block
+        cy.fixture('example').then(function (data) {
+            this.data = data
+        })
+    })
+```
