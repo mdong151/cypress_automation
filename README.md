@@ -213,3 +213,5 @@ before(function () {
         })
     })
 ```
+
+40. use `cy.pause()` to pause test execution

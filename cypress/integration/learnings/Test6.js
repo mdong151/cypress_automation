@@ -16,5 +16,10 @@ describe('Test suites no. 6', function () {
         cy.get("h4 input[name='name']").should('have.value', this.data.name)
         cy.get("div[class='form-group'] input[name='name']").should('have.attr', 'minlength', '2')
         cy.get("input[value='option3']").should('be.disabled')
+        cy.get("[href='/angularpractice/shop']").click()
+        this.data.productName.forEach(function (product) {
+            cy.addProduct(product)
+        })
+
     })
 })
