@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import HomePage from '../pageObjects/HomePage'
 
 describe('Test suites no. 6', function () {
 
@@ -10,13 +11,14 @@ describe('Test suites no. 6', function () {
     })
 
     it('Test case no. 1', function () {
+        const homePage = new HomePage()
         cy.visit('https://rahulshettyacademy.com/angularpractice/')
-        cy.get("div[class='form-group'] input[name='name']").type(this.data.name)
-        cy.get("select").select(this.data.gender)
-        cy.get("h4 input[name='name']").should('have.value', this.data.name)
-        cy.get("div[class='form-group'] input[name='name']").should('have.attr', 'minlength', '2')
-        cy.get("input[value='option3']").should('be.disabled')
-        cy.get("[href='/angularpractice/shop']").click()
+        homePage.getEditNameBox().type(this.data.name)
+        homePage.getGender().select(this.data.gender)
+        homePage.getTwoWayDataBinding().should('have.value', this.data.name)
+        homePage.getEditNameBox().should('have.attr', 'minlength', '2')
+        homePage.getEntrepreneur().should('be.disabled')
+        homePage.getShopTab().click()
         this.data.productName.forEach(function (product) {
             cy.addProduct(product)
         })
