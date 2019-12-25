@@ -188,3 +188,17 @@ https://docs.cypress.io/api/events/catalog-of-events.html#App-Events
 ```
 cy.get('#opentab').invoke('removeAttr', 'target').click()
 ```
+
+38. How to test with table
+
+```
+cy.get("#product tr td:nth-child(2)").each(($el, index, $list) => {
+    const text = $el.text()
+    if (text.includes('Python')) {
+        cy.get("#product tr td:nth-child(2)").eq(index).next().then(function (price) {
+            const priceText = price.text()
+            expect(priceText).to.equal('25')
+        })
+    }
+})
+```
