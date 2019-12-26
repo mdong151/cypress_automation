@@ -1,1 +1,6 @@
-{}
+{
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "mochaFile": "results/my-test-output-[hash].xml"
+      }
+}

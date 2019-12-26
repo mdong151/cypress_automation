@@ -254,3 +254,4 @@ Cypress.env('urlProd')
 
 47. It's better to place page object in `supports` folder
 
+48. user Mochawesome to generate html report `npm install --save-dev mochawesome`

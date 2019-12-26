@@ -4,11 +4,14 @@
   "description": "Learning Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules\\.bin\\cypress run --spec 'cypress\\integration\\learnings\\*' --reporter mochawesome",
+    "chromeTest": "npm run test -- --browser chrome --headless"
   },
   "author": "DongNM",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^3.8.0"
+    "cypress": "^3.8.0",
+    "mochawesome": "^4.1.0",
+    "mocha": "^5.2.0"
   }
 }
