@@ -216,4 +216,8 @@ before(function () {
 
 40. use `cy.pause()` to pause test execution
 
-41. To add specific config for each test run, use `Cypress.config('defaultCommandTimeout',2000)`
+41. To add specific config for each test run, use `Cypress.config('defaultCommandTimeout',2000)` inside your test block (it)
+
+42. use method `click({force : true})` to force click on an element
+
+43. Cypress use `Chai` assertion `expect(true).to.be.true`
