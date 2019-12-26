@@ -47,6 +47,7 @@ node_modules\.bin\cypress open
 - run with headed mode: `node_modules\.bin\cypress run --headed --spec "cypress\integration\learnings\Test1.js"`
 - run all test spec under 1 folder: `node_modules\.bin\cypress run --headed --spec "cypress\integration\learnings\*"`
 - run test with chrome browser: `run --browser chrome`\n
+- run test with env variable: `node_modules\.bin\cypress run --spec "cypress\integration\learnings\*" --env url=https://google.com` --headed 
 
 13. Folder strucure
 
@@ -244,3 +245,12 @@ res[1].trim()
             "urlDev": "https://abc.xyz"
 }
 ```
+
+usage in code
+
+```
+Cypress.env('urlProd')
+```
+
+47. It's better to place page object in `supports` folder
+
