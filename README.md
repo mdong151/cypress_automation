@@ -220,4 +220,27 @@ before(function () {
 
 42. use method `click({force : true})` to force click on an element
 
-43. Cypress use `Chai` assertion `expect(true).to.be.true`
+43. Cypress use `Chai` assertion `expect(true).to.be.true` and `expect().to.equal()`
+
+44. Java script to split string 
+
+```
+var res = actualText.split(" ")
+res[1].trim()
+
+//res[0] = $.
+//res[1] = 50000
+
+```
+
+45. Java script to convert string `Number(res)`
+
+46. To set environment variable, insert below json in cypress.json
+
+```
+"env":
+{
+            "urlProd": "https://google.com",
+            "urlDev": "https://abc.xyz"
+}
+```
